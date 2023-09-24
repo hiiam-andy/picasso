@@ -1,19 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchOnePost } from "../../pages/postPage/postPageApi/postPageSlice";
+
 import styles from "./PostFull.module.css";
+import { useFetchOnePostQuery } from "../../app/store/postPageQuery";
 
 export default function PostFull() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchOnePost(id));
-  }, []);
-  const onePost = useSelector((state) => state.onePost.data);
-  const isLoading = useSelector((state) => state.onePost.isLoading);
+  const { data } = useFetchOnePostQuery(id);
+  const onePost = data ?? [];
+
   return (
     <div className={styles.post}>
       <button onClick={() => navigate(-1)} className={styles.post_backLink}>
@@ -38,15 +35,15 @@ export default function PostFull() {
       <div className={styles.post_info}>
         <div className={`${styles.post_number} ${styles.post_text}`}>
           <b>Пост: </b>
-          {isLoading ? "Загрузка..." : `${onePost.id}`}
+          {onePost.id}
         </div>
         <div className={`${styles.post_heading} ${styles.post_text}`}>
           <b>Заголовок: </b>
-          {isLoading ? "Загрузка..." : `${onePost.title}`}
+          {onePost.title}{" "}
         </div>
         <div className={`${styles.post_description} ${styles.post_text}`}>
           <b>Описание: </b>
-          {isLoading ? "Загрузка..." : `${onePost.body}`}
+          {onePost.body}
         </div>
       </div>
     </div>

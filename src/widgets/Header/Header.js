@@ -78,7 +78,6 @@ export default function Header() {
           Задание
         </NavLink>
       </nav>
-      <use xlinkHref={`../../shared/assets/sprite.svg#dd-logo`} />
     </header>
   );
 }

@@ -1,11 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
-import {
-  setLoading,
-  setPage,
-} from "../../pages/MainPage/mainApi/mainPageSliced";
+
 import PostCard from "../postCard/PostCard";
 import { useEffect } from "react";
 import styles from "./PostList.module.css";
+import { setLoading, setPage } from "../../app/store/mainPageSliced";
 
 export default function PostList2() {
   const dispatch = useDispatch();

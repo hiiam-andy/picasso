@@ -4,9 +4,10 @@ import AppRouter from "./providers/AppRouter";
 import "./styles/styles.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { fetchPosts } from "../pages/MainPage/mainApi/mainPageSliced";
+
 import Header from "../widgets/Header/Header";
 import Footer from "../widgets/footer/Footer";
+import { fetchPosts } from "./store/mainPageSliced";
 
 const App = () => {
   const dispatch = useDispatch();

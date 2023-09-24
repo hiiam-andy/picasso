@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import mainPageSliced from "../pages/MainPage/mainApi/mainPageSliced";
-import postPageSlice from "../pages/postPage/postPageApi/postPageSlice";
+import mainPageSliced from "./store/mainPageSliced";
+import { postsAPI } from "./store/postPageQuery";
 
 export const store = configureStore({
   reducer: {
     posts: mainPageSliced,
-    onePost: postPageSlice,
+    [postsAPI.reducerPath]: postsAPI.reducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(postsAPI.middleware),
 });

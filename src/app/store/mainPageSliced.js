@@ -1,6 +1,7 @@
 import axios from "axios";
-import { BASE_URL } from "../../../shared/constants/constants";
+
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { BASE_URL } from "../../shared/constants/constants";
 
 export const fetchPosts = createAsyncThunk("posts/getPosts", async (page) => {
   try {
