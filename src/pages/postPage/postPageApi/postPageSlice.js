@@ -18,12 +18,21 @@ const onePostSlice = createSlice({
   name: "onePost",
   initialState: {
     data: [],
+    isLoading: false,
   },
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchOnePost.fulfilled, (state, action) => {
-      state.data = action.payload;
-    });
+    builder
+      .addCase(fetchOnePost.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(fetchOnePost.fulfilled, (state, action) => {
+        state.data = action.payload;
+        state.isLoading = false;
+      })
+      .addCase(fetchOnePost.rejected, (state) => {
+        state.isLoading = false;
+      });
   },
 });
 

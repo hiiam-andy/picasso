@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   height: 50px;
-  padding: 0 3%;
+  padding: 0 5%;
   background-color: #f3f6f6;
   }
   .footer_container{
@@ -41,8 +41,9 @@
 
   @media(max-width:700px){
     .footer{
-      height: 40px;
+      height: 50px;
       font-size: 14px;
+      padding-bottom: 12px;
     }
     .footer_logo{
       width: 60px;

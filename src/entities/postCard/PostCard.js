@@ -8,11 +8,11 @@ export default function PostCard({ number, title, body }) {
     <div className={styles.card}>
       <div className={styles.card_content}>
         <div className={styles.card_heading}>
-          <div className={styles.card_number}>{number}</div>
-        </div>
-        <div>
-          <b>Заголовок: </b>
-          {title}
+          <div className={styles.card_number}>{number}.</div>
+          <h1 className={styles.card_title}>
+            <b>Заголовок: </b>
+            {title}
+          </h1>
         </div>
         <div className={styles.card_description}>
           <b>Описание: </b>
