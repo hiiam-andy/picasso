@@ -1,10 +1,7 @@
 .card{
-  position: relative;
   display: flex;
   flex-direction: column;
-  align-self: center;
   padding: 10px 20px 0;
-  width: 100%;
   border: 1px solid gray;
   border-radius: 18px;
   margin-bottom: 20px;
@@ -15,7 +12,6 @@
 }
 .card_heading{
   display: flex;
-  align-items: flex-start;
   margin-bottom: 6px;
 }
 .card_number{
