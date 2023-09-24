@@ -19,7 +19,7 @@ export default function PostList2() {
 
   useEffect(() => {
     if (isLoading) {
-      setTimeout(() => fetchMoreData(), 50);
+      setTimeout(() => fetchMoreData(), 100);
       dispatch(setLoading(false));
     }
   }, [isLoading]);
@@ -33,7 +33,7 @@ export default function PostList2() {
     if (
       e.target.documentElement.scrollHeight -
         (e.target.documentElement.scrollTop + window.innerHeight) <
-      1
+      90
     ) {
       dispatch(setLoading(true));
     }

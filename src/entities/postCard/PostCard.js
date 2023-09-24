@@ -16,7 +16,7 @@ export default function PostCard({ number, title, body }) {
         </div>
         <div className={styles.card_description}>
           <b>Описание: </b>
-          <span>{body}</span>
+          <span className={styles.card_description_text}>{body}</span>
         </div>
       </div>
       <NavLink to={`/${number}`} className={styles.card_btn}>

@@ -23,6 +23,7 @@ ol, ul {
 }
 .container{
   display: flex;
+  justify-content: center;
   max-width: 1024px;
   margin-right: auto;
   margin-left: auto;
