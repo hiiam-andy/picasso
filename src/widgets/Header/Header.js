@@ -9,6 +9,7 @@ export default function Header() {
       <nav className={styles.header_nav}>
         <NavLink to={PAGE_MAIN} className={styles.header_nav__link}>
           <svg
+            className={styles.header_logo}
             width="123"
             height="41"
             viewBox="-2 -2 123 41"
