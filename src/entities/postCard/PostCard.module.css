@@ -15,10 +15,11 @@
 }
 .card_heading{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  margin-bottom: 6px;
 }
 .card_number{
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   margin-right: 2%;
   color: #e8406c;
@@ -31,6 +32,7 @@ font-weight: 600;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+
 }
 .card_btn{
   position: relative;
