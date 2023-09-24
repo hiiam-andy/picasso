@@ -1,0 +1,24 @@
+.header{
+  display: flex;
+  align-items: center;
+  height: 68px;
+  padding: 0 25px;
+}
+.header_nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 1024px;
+}
+.header_nav__link{
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  transition: color 0.2s
+}
+.header_nav__link:hover{
+  color: #931680;
+}

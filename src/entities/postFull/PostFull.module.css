@@ -1,0 +1,35 @@
+.post{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+}
+.post_backLink{
+position: relative;
+display: flex;
+align-items: center;
+width: 100%;
+border: none;
+background: transparent;
+cursor: pointer;
+margin-bottom: 20px;
+}
+.post_backLink .arrow{
+  position: relative;
+  right: 0;
+  transition: right 0.4s;
+}
+.post_backLink:hover .arrow{
+right: 5px;
+transition: 0.4s;
+}
+.post_backLink:hover .text{
+  color: #931680;
+  transition: color 0.4s;
+}
+.post_backLink .text{
+  margin-left: 4px;
+}
+.post_text{
+  margin-bottom: 15px;
+}
